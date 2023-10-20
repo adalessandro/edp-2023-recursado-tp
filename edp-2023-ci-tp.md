@@ -16,7 +16,7 @@ A su vez, estas funcionalidades se dividirán en dos módulos:
 
 ## Diagrama arquitectura final
 
-![](https://s3.hedgedoc.org/demo/uploads/0901689b-c596-48af-8252-a03b162835c3.png)
+![](./diagrama.png)
 
 ## Módulo Generador
 
