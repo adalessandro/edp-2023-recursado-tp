@@ -1,0 +1,2 @@
+Usuario: gon
+Uso de CPU: 0%
