@@ -1,13 +1,16 @@
 #!/bin/bash
 
-#Comando encargado de generar un archivo aleatorio, que puede ser un texto, una imagen o un audio
-#tipos de archivos:
+#---
+#Crea un archivo aleatorio, puede ser de 3 tipos:
   #texto (0)
   #imagen(1)
   #audio (2)
+#---
 
-tipo=$(($RANDOM % 3))
+TIPO=$(($RANDOM % 3))
 
-[ tipo == 0 ] && bash generador_texto.sh
-[ tipo == 1 ] && ffmpeg -f lavfi -i "anoisesrc=a=0.1:c=white:duration=5" out.wav
-[ tipo == 2 ] && convert -size 100x100 xc: +noise Random noise.png
+[ $TIPO == 0 ] && bash generador_texto.sh
+[ $TIPO == 1 ] && bash generador_imagen.sh
+[ $TIPO == 2 ] && bash generador_audio.sh
+
+exit 0
