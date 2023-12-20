@@ -15,8 +15,9 @@
 
 TIPO=$(($RANDOM % 3))
 
-[ $TIPO == 0 ] && bash /home/gon/tuia/edp/bin/tp/edp-2023-recursado-tp/01-generador/scripts/generador_texto.sh
-[ $TIPO == 1 ] && bash /home/gon/tuia/edp/bin/tp/edp-2023-recursado-tp/01-generador/scripts/generador_imagen.sh
-[ $TIPO == 2 ] && bash /home/gon/tuia/edp/bin/tp/edp-2023-recursado-tp/01-generador/scripts/generador_audio.sh
+[ $TIPO == 0 ] && ./generador_texto.sh
+[ $TIPO == 1 ] && ./generador_imagen.sh
+[ $TIPO == 2 ] && ./generador_audio.sh
+
 
 exit 0

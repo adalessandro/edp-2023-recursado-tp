@@ -8,6 +8,8 @@
 OUTPUT_DIR=$1
 FILENAME=$2
 
+[ $# != 2 ] && echo "Error! Debe pasar un directorio y un archivo"
+ 
 if [[ ! -e $OUTPUT_DIR/$FILENAME ]]
 then
     echo "Error! Archivo inexistente"

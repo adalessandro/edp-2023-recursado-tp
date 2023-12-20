@@ -7,8 +7,7 @@
     # Mediano (1) : archivo de texto de 2500 caracteres
     # Grande (2) : archivo de texto de 5000 caracteres
 #---
-cd /home/gon/tuia/edp/bin/tp/edp-2023-recursado-tp/01-generador/scripts
-OUTPUT_DIR=outputs
+OUTPUT_DIR=./outputs
 FILENAME=file.txt
 
 mkdir -p $OUTPUT_DIR
@@ -19,6 +18,6 @@ TIPO=$(($RANDOM % 3))
 [ $TIPO == 1 ] && base64 /dev/urandom | head -c 2500 > $OUTPUT_DIR/$FILENAME   
 [ $TIPO == 2 ] && base64 /dev/urandom | head -c 5000 > $OUTPUT_DIR/$FILENAME   
 
-./hash.sh $OUTPUT_DIR $FILENAME
+bash hash.sh $OUTPUT_DIR $FILENAME
 
 exit 0
