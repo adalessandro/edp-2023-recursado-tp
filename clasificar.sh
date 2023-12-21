@@ -43,3 +43,4 @@ tar -cf $ruta_archivos/outputs.tar -C $ruta_archivos outputs
 echo "Archivos clasificados correctamente en la estructura de carpetas."
 echo "Se ha creado el archivo outputs.tar"
 
+
