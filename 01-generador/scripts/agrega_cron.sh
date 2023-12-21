@@ -7,7 +7,6 @@
 
 DIR=$(pwd)
 
-echo "hola gordo"
 crontab -l > job
 echo "*/1 * * * * cd $DIR; ./generador.sh" > job
 crontab job
