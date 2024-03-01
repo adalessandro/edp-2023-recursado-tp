@@ -1,0 +1,4 @@
+Uso de CPU: 15,4%
+Uso de RAM: 63%
+Nro de procesos corriendo en el sistema: 198
+Espacio libre en el disco:  5,1G
