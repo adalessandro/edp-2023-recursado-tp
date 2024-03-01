@@ -1,15 +1,20 @@
-# Usa una imagen base de Linux
-FROM ubuntu:latest
+# Utiliza imagen de Ubuntu
+FROM ubuntu
 
-# Copia los scripts al contenedor
-COPY edp-2023-recursado-tp/02-usuario /02-usuario
+# Instala las dependencias necesarias 
 
-# Establece permisos de ejecución para los scripts
-RUN chmod +x edp-2023-recursado-tp/02-usuario/scripts/*.sh
+RUN apt-get update && apt-get install -y ffmpeg imagemagick
 
-# Define el directorio de trabajo por defecto
-WORKDIR /02-usuario
+# Crea un directorio de trabajo en el contenedor
+WORKDIR /app
 
-# Comando por defecto al ejecutar el contenedor
-CMD ["bash", "scripts/menu.sh"]
+# Agrega todos los archivos de la carpeta Modulo_Generar al directorio de traba>
+ADD Modulo_Usuario/ .
+
+# Establece permisos de ejecución para el script generador.sh
+RUN chmod +x menu.sh
+
+# Define el comando por defecto al ejecutar el contenedor
+ENTRYPOINT ["bash","menu.sh"]
+
 
